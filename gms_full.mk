@@ -16,6 +16,18 @@
 #
 #
 
+# Recorder
+ifeq ($(TARGET_SUPPORTS_GOOGLE_RECORDER), true)
+PRODUCT_PACKAGES += \
+    RecorderPrebuilt
+endif
+
+# arcore
+ifeq ($(TARGET_INCLUDE_STOCK_ARCORE),true)
+PRODUCT_PACKAGES += \
+    arcore
+endif
+
 # product/app
 PRODUCT_PACKAGES += \
     CalculatorGooglePrebuilt \
@@ -31,10 +43,8 @@ PRODUCT_PACKAGES += \
     LatinIMEGooglePrebuilt \
     LocationHistoryPrebuilt \
     MarkupGoogle \
-    MicropaperPrebuilt \
     NgaResources \
     Ornament \
-    PixelWallpapers2020 \
     PlayAutoInstallConfig \
     PrebuiltBugle \
     PrebuiltGmail \
@@ -45,10 +55,9 @@ PRODUCT_PACKAGES += \
     TrichromeLibrary-Stub \
     Tycho \
     VZWAPNLib \
-    WallpapersBReel2020 \
     WebViewGoogle \
     WebViewGoogle-Stub \
-    arcore \
+    YouTube \
     talkback
 
 # product/priv-app
@@ -68,15 +77,12 @@ PRODUCT_PACKAGES += \
     GCS \
     GoogleDialer \
     GoogleOneTimeInitializer \
-    MaestroPrebuilt \
     DevicePersonalizationPrebuiltPixel2020 \
     MyVerizonServices \
     NovaBugreportWrapper \
     OBDM_Permissions \
     PartnerSetupPrebuilt \
     Phonesky \
-    PixelLiveWallpaperPrebuilt \
-    OPScreenRecord \
     SCONE \
     ScribePrebuilt \
     SettingsIntelligenceGooglePrebuilt \
@@ -95,15 +101,12 @@ PRODUCT_PACKAGES += \
 
 # system/app
 PRODUCT_PACKAGES += \
-    CaptivePortalLoginGoogle \
     GoogleExtShared \
     GooglePrintRecommendationService
 
 # system/priv-app
 PRODUCT_PACKAGES += \
     DocumentsUIGoogle \
-    NetworkPermissionConfigGoogle \
-    NetworkStackGoogle \
     TagGoogle
 
 # system_ext/app
@@ -121,8 +124,7 @@ PRODUCT_PACKAGES += \
     PixelSetupWizard \
     RilConfigService \
     StorageManagerGoogle \
-    TurboAdapter \
-    WallpaperPickerGoogleRelease
+    TurboAdapter
 
 # PrebuiltGmsCore
 PRODUCT_PACKAGES += \
@@ -144,3 +146,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/gms/product/blobs/product_blobs.mk)
 $(call inherit-product, vendor/gms/system/blobs/system_blobs.mk)
 $(call inherit-product, vendor/gms/system_ext/blobs/system-ext_blobs.mk)
+
