@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     VZWAPNLib \
     WebViewGoogle \
     WebViewGoogle-Stub \
-    YouTube \
     talkback
 
 # product/priv-app

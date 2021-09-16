@@ -1,0 +1,10 @@
+cd /data/derp
+export CCACHE_DIR=/home/yash/ccache
+export USE_CCACHE=1
+ccache -M 30G
+ccache -o compression=true 
+ccache -z
+ccache -s
+. build/envsetup.sh
+lunch derp_sakura-user
+mka derp
