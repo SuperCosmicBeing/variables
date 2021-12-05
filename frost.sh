@@ -1,4 +1,4 @@
-sudo curl -sL https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | sh
+sudo curl -sL https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | sh 
 cd
 sudo apt install aria2
 aria2c https://tdrive.derpsakura.workers.dev/0:/ccache/derpc.tar.gz -x4 -s50
